@@ -1,0 +1,197 @@
+
+.banner 
+    position: relative
+    margin-top: 25px
+    padding: 24px
+    padding-left: 356px
+    background: #2E2F40
+    border-radius: 10px
+
+    &__row 
+        display: flex 
+        align-items: center
+        justify-content: space-between
+
+.banner-image
+    position: absolute
+    &--left 
+        top: -26px
+        left: -65px
+
+    &--middle 
+        top: -33px
+        right: 515px
+    
+    &--right 
+        top: -20px
+        right: -82px
+
+.banner-timer 
+    display: flex 
+    align-items: center
+    padding: 10px
+    border: 1px solid #3A3B4B
+    border-radius: 7px
+    font-family: 'DIN Pro'
+
+    &__icon 
+        margin: 0 10px
+        width: 32px
+        height: 34px
+
+    &__item        
+        padding: 14px 12px
+        font-weight: 700
+        font-size: 22px
+        line-height: 26px
+        text-transform: uppercase
+        color: #CECFDE
+        background: #343545
+        
+        box-shadow: 0px 17px 21px rgba(31, 32, 45, 0.5)
+        border-radius: 5px
+        &--days
+            padding: 14px 20px
+            margin: 0 10px 
+            background: #3D3E50
+
+    &__dots 
+        position: relative
+        margin: 0 6px
+        width: 3px
+        height: 14px
+        &::before, &::after 
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            width: 3px
+            height: 3px
+            border-radius: 50%
+            background: #525468
+        &::before
+            top: 1px
+        &::after 
+            bottom: 1px
+        
+
+    &__group
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 5px
+
+.banner-buttons 
+    display: flex 
+    align-items: center
+    flex-wrap: wrap
+
+.banner-btn 
+    display: flex 
+    align-items: center
+    justify-content: space-between 
+    padding: 10px 24px
+    width: 212px
+    height: 72px
+    margin: 0 5px
+    opacity: 0.9
+    backdrop-filter: blur(7px)
+    border-radius: 7px
+    font-family: "FS Elliot Pro"
+    font-weight: 900
+    font-size: 18px
+    line-height: 20px
+    text-transform: uppercase
+    text-decoration: none
+    transition: 0.3s ease
+    &:last-child 
+        margin-right: 0
+
+    svg 
+        transition: 0.3s ease
+
+    &--green 
+        background: rgba(95, 177, 123, 0.7)
+        color: #F1FFDE
+        svg 
+            fill: #A5E2A9
+        &:hover 
+            opacity: 1
+            background: rgba(130, 212, 158, 0.7)
+            svg
+                fill: #C8F4CB
+
+    &--purple
+        background: rgba(112, 117, 234, 0.7)
+        color: #F2F0FF
+        svg 
+            fill: #9EAAF8
+        &:hover 
+            opacity: 1
+            background: rgba(138, 142, 245, 0.7)
+            svg
+                fill: #C5CCFF
+
+    &__icon 
+        position: relative
+        display: flex
+        &--marker 
+            &::before 
+                content: ''
+                position: absolute 
+                top: -1px
+                right: -9px
+                width: 7px
+                height: 7px
+                border-radius: 50%
+                background: #FF8885
+
+@media (max-width: 1400px)
+    .banner-image 
+        display: none
+    
+    .banner-btn
+        padding: 10px 20px
+        width: 180px
+        height: 60px
+
+    .banner 
+        padding: 20px
+
+@media (max-width: 991px)
+    .banner
+        &__row 
+            flex-direction: column
+
+    .banner-buttons
+        margin-top: 20px
+
+    .banner-btn
+        padding: 10px
+        width: 160px
+        height: 50px
+
+    .banner-timer 
+        &__item 
+            padding: 10px
+
+@media (max-width: 560px)
+    .banner 
+        padding: 10px
+
+    .banner-timer 
+        &__icon 
+            display: none
+        
+        &__item 
+            padding: 5px
+            font-size: 16px
+            line-height: 18px
+            &--days 
+                margin-left: 0
+
+    .banner-buttons
+        flex-direction: column 
+        justify-content: center
+
+    .banner-btn 
+        margin: 0 0 10px

@@ -1,0 +1,56 @@
+-
+    var cases = [
+        {
+            title: 'Прогулка',
+            image: 'img/cases/case-1.png',
+            price_new: '19Р',
+            price_old: '9Р'
+        }, {
+            title: 'Обострение',
+            image: 'img/cases/case-2.png',
+            price_new: '23Р',
+            price_old: '56Р'
+        }, {
+            title: 'Макро',
+            image: 'img/cases/case-3.png',
+            price_new: '36Р',
+            price_old: '43Р'
+        }, {
+            title: 'Ядовитый',
+            image: 'img/cases/case-4.png',
+            price_new: '86Р',
+            price_old: '98Р'
+        }, {
+            title: 'Радуга',
+            image: 'img/cases/case-5.png',
+            price_new: '44Р',
+            price_old: '53Р'
+        }, {
+            title: 'Шашлык',
+            image: 'img/cases/case-6.png',
+            price_new: '78Р',
+            price_old: '83Р'
+        }
+    ]
+
+
+section.cases-wrap 
+    .container 
+        .cases 
+            .cases__head.cases__head--sale 
+                img(src="img/black-friday3-1.png")
+        
+            .case-list 
+                each item in cases
+                    .case-list__item
+                        a.case-link(href="#")
+                            .case-link__image 
+                                img(src=item.image)
+                                .case-link__price-row
+                                    span.case-link__price 
+                                        | !{item.price_new}
+                                    del.case-link__price.case-link__price--old
+                                        | !{item.price_old}
+                            p.case-link__title 
+                                | !{item.title}
+

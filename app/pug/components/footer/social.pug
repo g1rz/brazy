@@ -1,0 +1,15 @@
+-
+    var social = [
+        'img/sprite.svg#telegram',
+        'img/sprite.svg#vk-2',
+        'img/sprite.svg#instagram-2',
+        'img/sprite.svg#youtube',
+        'img/sprite.svg#tiktok-2'
+    ]
+
+ul.social.social--footer
+    each item in social 
+        li.social__item 
+            a.social__link(href="#", target="_blank")
+                svg
+                    use(xlink:href=item)

@@ -1,0 +1,184 @@
+.livedrop-wrap 
+    position: relative
+    border-radius: 0px 12px 0px 0px
+    overflow-x: hidden
+    &::before, &::after 
+        content: ''
+        position: absolute
+        top: 0
+        width: 200px
+        height: 100%
+        z-index: 20
+    &::before 
+        left: 0
+        background: linear-gradient(270deg, rgba(33, 35, 47, 0) 0%, #21232F 100%)
+    &::after 
+        right: 0
+        background: linear-gradient(270deg, #21232F 0%, rgba(33, 35, 47, 0) 100%)
+    
+    
+.livedrop
+    display: flex 
+    margin: 0
+    padding: 0
+    list-style: none
+    margin-left: -50px
+    
+        
+    &__item 
+        // border: 1px solid red
+        border-right: 1px solid transparent
+    &__link 
+        position: relative
+        display: block
+        width: 132px
+        height: 104px
+        overflow: hidden 
+
+        &::before 
+            content: ''
+            position: absolute
+            width: 56px
+            height: 56px
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center   
+        &::after 
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 50%
+            width: 40px
+            height: 2px
+            background: #000         
+            transform: translateX(-50%)
+
+        &--yellow 
+            background: linear-gradient(0deg, rgba(255, 148, 22, 0.3) 0%, rgba(35, 37, 49, 0) 70.43%), #252635
+            &::before
+                background-image: url('../img/livedrop/logo-yellow.svg')
+            &::after 
+                background: #FFB84E
+                box-shadow: 0px -2px 17px rgba(238, 136, 43, 0.6)
+
+        &--blue 
+            background: linear-gradient(0deg, rgba(71, 112, 255, 0.3) 0%, rgba(35, 37, 49, 0) 70.43%), #252635
+            &::before
+                background-image: url('../img/livedrop/logo-blue.svg')
+            &::after 
+                background: #567BFF
+                box-shadow: 0px -2px 17px rgba(64, 106, 255, 0.7)
+
+        &--light-blue 
+            background: linear-gradient(0deg, rgba(84, 202, 227, 0.3) 0%, rgba(35, 37, 49, 0) 70.43%), #252635
+            &::before
+                background-image: url('../img/livedrop/logo-light-blue.svg')
+            &::after 
+                background: #6DD1DF
+                box-shadow: 0px -2px 17px rgba(71, 200, 255, 0.6)
+
+        &--red 
+            background: linear-gradient(0deg, rgba(252, 53, 40, 0.3) 0%, rgba(35, 37, 49, 0) 70.43%), #252635
+            &::before
+                background-image: url('../img/livedrop/logo-red.svg')
+            &::after 
+                background: #F84B4B
+                box-shadow: 0px -2px 17px rgba(255, 50, 50, 0.6)
+
+        &--gray 
+            background: linear-gradient(0deg, rgba(143, 143, 143, 0.3) 0%, rgba(35, 37, 49, 0) 70.43%), #252635
+            &::before
+                background-image: url('../img/livedrop/logo-gray.svg')
+            &::after 
+                background: #A6A6A6
+                box-shadow: 0px -2px 17px rgba(163, 163, 163, 0.6)
+
+        &--purple 
+            background: linear-gradient(0deg, rgba(121, 58, 255, 0.3) 0%, rgba(35, 37, 49, 0) 70.43%), #252635
+            &::before
+                background-image: url('../img/livedrop/logo-purple.svg')
+            &::after 
+                background: #8B62FF
+                box-shadow: 0px -2px 17px rgba(140, 50, 255, 0.7)
+
+        &--rose 
+            background: linear-gradient(0deg, rgba(255, 71, 170, 0.3) 0%, rgba(35, 37, 49, 0) 70.43%), #252635
+            &::before
+                background-image: url('../img/livedrop/logo-rose.svg')
+            &::after 
+                background: #EF6A9A
+                box-shadow: 0px -2px 17px rgba(255, 74, 139, 0.6)
+
+    &__title 
+        position: absolute
+        display: block
+        left: 14px
+        bottom: 12px
+        font-weight: 500
+        font-size: 10px
+        line-height: 12px
+        color: #B1B1B1
+
+        .type 
+            display: block
+            font-size: 11px
+            line-height: 13px
+            color: #FFFFFF
+    
+    &__img 
+        position: absolute
+        top: 11px
+        left: 50%
+        transform: translateX(-50%)
+        max-width: 100px
+    
+    &__hover 
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background: rgba(45, 45, 60, 0.84)
+        backdrop-filter: blur(4px)
+        z-index: 10
+        opacity: 0
+        transition: 0.2s ease
+
+    &__hover-inner 
+        display: block
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        width: 100%
+        height: 100%
+        transition: 0.3s ease-in-out
+
+    &__hover-img 
+        width: 73px
+        height: 73px
+        margin: 6px auto 0
+
+    &__hover-title 
+        display: block 
+        color: #fff 
+        font-weight: 500
+        font-size: 11px
+        line-height: 13px
+        text-align: center
+
+
+.livedrop__item:hover 
+    .livedrop__hover
+        opacity: 1
+
+    .livedrop__hover-inner
+        transform: translateY(-100%)
+
+@media (max-width: 767px)
+    .livedrop-wrap
+        &::before, &::after 
+            width: 50px

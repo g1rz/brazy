@@ -1,0 +1,53 @@
+section.banner-wrap 
+    .container
+        .banner
+            .banner-image.banner-image--left 
+                img(src="img/banner-left.png")
+
+            .banner-image.banner-image--middle 
+                img(src="img/banner-middle.png")
+
+            .banner-image.banner-image--right 
+                img(src="img/banner-right.png")
+                
+            .banner__row 
+                .banner-timer
+                    include ./icon-timer.svg
+
+                    .banner-timer__item.banner-timer__item--days
+                        span 21 ДЕНЬ
+
+                    .banner-timer__group
+                        .banner-timer__item
+                            span 2
+                        .banner-timer__item
+                            span 2
+
+                    .banner-timer__dots
+
+                    .banner-timer__group
+                        .banner-timer__item
+                            span 4
+                        .banner-timer__item
+                            span 5
+
+                    .banner-timer__dots
+
+                    .banner-timer__group
+                        .banner-timer__item
+                            span 1
+                        .banner-timer__item
+                            span 7
+                
+                .banner-buttons 
+                    a.banner-btn.banner-btn--green(href="#")
+                        span.banner-btn__text 
+                            | Подарки
+                        .banner-btn__icon.banner-btn__icon--marker
+                            include ./gift.svg
+
+                    a.banner-btn.banner-btn--purple(href="#")
+                        span.banner-btn__text 
+                            | Ивент
+                        .banner-btn__icon
+                            include ./event.svg

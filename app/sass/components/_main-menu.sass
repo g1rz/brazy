@@ -1,0 +1,71 @@
+.main-menu 
+    display: flex 
+    min-height: 70px
+    padding: 0
+    margin: 0 30px 
+    list-style: none
+    flex-wrap: wrap
+
+    &__item 
+        margin-right: 22px
+        &:last-child
+            margin-right: 0
+
+    &__link 
+        position: relative
+        display: flex
+        height: 100%
+        align-items: center
+        padding-left: 30px
+        font-weight: 700
+        font-size: 13px
+        line-height: 16px
+        color: #CECFDE
+        text-transform: uppercase
+        text-decoration: none
+        transition: 0.3s ease
+        &::after 
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            right: 0
+            width: 100%
+            height: 2px
+            background: #2F3142
+            transition: 0.3s ease
+            opacity: 0
+            visibility: hidden
+
+        &.active, &:hover
+            color: #FFBD98
+            .main-menu__icon  
+                fill: #FFBD98
+        
+        &:hover::after 
+            opacity: 1
+            visibility: visible
+            top: 100%
+            // transform: translateY(100%)
+    
+    &__icon 
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        width: 18px
+        height: 18px
+        fill: #474754
+        transition: 0.3s ease
+
+    &__label 
+        display: inline-block 
+        padding: 3px 5px 
+        margin-left: 8px
+        font-weight: 800
+        font-size: 8px
+        line-height: 10px
+        text-transform: uppercase
+        color: #FFFFFF
+        border-radius: 4px
+        background-color: #EA639C

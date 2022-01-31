@@ -1,0 +1,67 @@
+.langs
+    position: relative
+    width: 75px
+    margin: 0 10px
+
+    &__btn 
+        position: relative
+        display: flex 
+        align-items: center
+        width: 100%
+        height: 36px 
+        padding: 10px
+        background: #242633
+        border-radius: 10px
+        border: none 
+        outline: none
+        cursor: pointer
+        transition: 0.3s ease
+        &::after 
+            content: ''
+            position: absolute
+            top: 50%
+            right: 5px
+            transform: translateY(-50%)
+            width: 8px
+            height: 8px
+            background: url('../img/sprite.svg#arrow') no-repeat center bottom 
+            transition: 0.3s ease
+
+        &--active 
+            border-radius: 10px 10px 0 0
+            &::after
+                transform: translateY(-50%) rotate(-90deg)
+
+
+    &__item 
+        position: relative
+        display: block 
+        padding-left: 24px
+        font-size: 12px
+        font-weight: 700
+        line-height: 14px
+        color: #CECFDE
+        text-transform: uppercase
+        &::before 
+            content: ''
+            position: absolute
+            top: -1px
+            left: 0
+            width: 16px
+            height: 16px
+        &--en::before 
+            background-image: url('../img/flags/flag-en.svg')
+
+    &__list 
+        position: absolute
+        left: 0
+        right: 0
+        top: 100%
+        margin: 0
+        padding: 0 0 5px
+        background: #242633
+        list-style: none 
+        border-radius: 0 0 10px 10px
+
+    &__list-item 
+        padding: 5px 10px

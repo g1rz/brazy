@@ -1,0 +1,206 @@
+.footer
+    background: linear-gradient(180deg, #17171F 0%, #14141C 100%)
+
+.footer-top 
+    display: flex 
+    flex-wrap: wrap
+    padding-top: 18px
+    &__left 
+        width: 260px
+
+    &__right 
+        width: calc(100% - 260px)
+
+.footer-inner 
+    position: relative
+    &::before 
+        content: ''
+        width: 588px
+        height: 665px
+        background: url('../img/footer-image.png') no-repeat center 
+        position: absolute
+        bottom: 0
+        right: -58px
+        z-index: 5
+
+.footer-copyright
+    margin: 34px 0 32px 32px
+    font-weight: 325
+    font-size: 16px
+    line-height: 18px
+    color: #CECFD6
+
+    &__year
+        margin-bottom: 5px
+        font-weight: 900
+        font-size: 17px
+        line-height: 20px
+        text-transform: uppercase
+        color: #FFFFFF
+
+.footer-menu
+    margin: 0
+    padding: 0 
+    list-style: none
+    &__item 
+        margin-bottom: 20px
+        &:last-child 
+            margin-bottom: 0
+    &__link 
+        font-weight: 325
+        font-size: 14px
+        line-height: 17px
+        color: #90929E
+        text-decoration: none
+        &:hover 
+            text-decoration: underline
+
+.footer-features 
+    padding: 70px 84px
+    background: linear-gradient(260.7deg, rgba(26, 26, 32, 0.5) 19.27%, rgba(29, 29, 37, 0.5) 90.31%)
+    border-radius: 80px
+
+    &__list 
+        display: flex 
+        flex-wrap: wrap
+        max-width: 800px
+        margin: 0 0 -40px
+        padding: 0
+        list-style: none 
+
+    &__item 
+        position: relative
+        width: 310px
+        margin-bottom: 40px
+        padding: 0 20px 0 54px
+        &::before 
+            content: ''
+            width: 46px
+            height: 46px
+            position: absolute
+            top: 0
+            left: 0
+            background-repeat: no-repeat
+            background-position: center 
+            background-size: contain
+        &--cases::before 
+            background-image: url('../img/sprite.svg#feature-1')
+        &--players::before 
+            background-image: url('../img/sprite.svg#feature-2')
+        &--contracts::before 
+            background-image: url('../img/sprite.svg#feature-3')
+        &--upgrades::before 
+            background-image: url('../img/sprite.svg#feature-4')
+
+    &__count 
+        margin-bottom: 2px
+        font-weight: 900
+        font-size: 25px
+        line-height: 30px
+        text-transform: uppercase
+        color: #F5F5F5
+
+    &__title 
+        font-size: 12px
+        line-height: 14px
+        text-transform: uppercase
+        color: #71727D
+
+.footer-bottom 
+    position: relative
+    display: flex 
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    padding: 70px 0 136px
+    z-index: 10
+    background-color: rgba(23,23,31,.93)
+    backdrop-filter: blur(5px)
+
+.btn-coop 
+    position: relative
+    display: inline-block
+    padding: 20px 100px 20px 20px 
+    background: #1E1E2C
+    border-radius: 8px
+    font-weight: 900
+    font-size: 13px
+    line-height: 16px
+    color: #96AADD
+    text-decoration: none
+    transition: 0.3s ease
+    &:hover 
+        background: lighten(#1E1E2C, 5%)
+    &::after 
+        content: ''
+        width: 20px
+        height: 20px
+        background: url('../img/sprite.svg#coop') no-repeat center
+        position: absolute
+        top: 50%
+        right: 22px
+        transform: translateY(-50%)
+
+.footer-info 
+    display: flex 
+    max-width: 690px
+    padding-left: 20px
+    font-size: 13px
+    line-height: 20px
+    color: #4D4E57
+    &__email 
+        position: relative
+        display: inline-block
+        margin-right: 40px
+        flex-grow: 1
+        padding: 18px 22px 18px 58px
+        border: 1px dashed rgba(48, 34, 34, 0.86)
+        border-radius: 8px
+        font-size: 15px
+        line-height: 18px
+        color: #934C4C
+        text-decoration: none
+        &::before 
+            content: ''
+            position: absolute 
+            top: 50%
+            left: 24px
+            width: 20px
+            height: 20px
+            transform: translateY(-50%)
+            background: url('../img/sprite.svg#email') no-repeat center
+
+@media (max-width: 1400px)
+    .footer-inner::before
+        display: none
+
+    .footer-bottom
+        padding: 50px 0
+
+    .footer-features
+        padding: 40px
+
+@media (max-width: 991px)
+    .footer-features__item
+        margin-bottom: 20px
+
+@media (max-width: 767px)
+    .footer-top
+        flex-direction: column 
+        &__left, &__right 
+            width: 100%
+
+    .footer-bottom
+        padding: 30px 0
+        flex-direction: column
+
+    .btn-coop
+        margin-bottom: 20px
+
+    .footer-info
+        flex-direction: column
+        padding: 0
+        margin-top: 20px
+        align-items: center
+        &__email 
+            margin: 0 0 20px

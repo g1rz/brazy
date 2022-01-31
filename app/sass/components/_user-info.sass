@@ -1,0 +1,68 @@
+.user-info-row
+    display: flex 
+    align-items: center 
+    justify-content: center
+    margin: 0 12px
+
+.user-info-notif 
+    border-radius: 12px
+
+.user-info 
+    display: block
+    position: relative
+    padding-left: 58px
+    margin: 0 22px 0 15px
+
+    &__icon 
+        position: absolute
+        top: 50%
+        left: 0
+        width: 44px
+        height: 44px
+        transform: translateY(-50%)
+        border-radius: 14px
+        overflow: hidden 
+        img 
+            width: 100%
+            height: 100%
+            object-fit: cover 
+
+    &__name 
+        margin: 0
+        font-size: 16px
+        line-height: 19px
+        color: #E9E9E9
+    
+    &__balans 
+        margin: 0
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        color: #63DEB1
+
+.user-info-refill
+    margin-right: 10px
+    color: #F1FFDE
+    background: #5CBB98
+    transition: 0.3s ease
+    &:hover 
+        background: darken(#5CBB98, 10%)
+    svg 
+        fill: #F1FFDE
+    
+.user-info-exit 
+    background: #272A38
+    border: none
+    &:hover 
+        background: darken(#272A38, 5%)
+
+.user-info-mobile 
+    width: 44px
+    height: 44px
+    margin-left: 10px
+    border-radius: 14px 
+    overflow: hidden
+    img 
+        width: 100%
+        height: 100%
+        object-fit: cover

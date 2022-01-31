@@ -1,0 +1,122 @@
+-
+    var livedrop = [
+        {
+            color: 'rose',
+            image: 'img/livedrop/ld-item-1.png',
+            title: 'R8 Revolver',
+            type: 'Hot Rod	',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'yellow',
+            image: 'img/livedrop/ld-item-2.png',
+            title: 'MAC-10',
+            type: 'Hypnotic',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'yellow',
+            image: 'img/livedrop/ld-item-3.png',
+            title: 'Spectral Shiv',
+            type: 'Copper',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'red',
+            image: 'img/livedrop/ld-item-4.png',
+            title: 'Bayonet',
+            type: 'Red Quartz',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'red',
+            image: 'img/livedrop/ld-item-5.png',
+            title: 'Tec-9',
+            type: 'Gunsmoke',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'gray',
+            image: 'img/livedrop/ld-item-6.png',
+            title: 'MP7',
+            type: 'Dark Age',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'gray',
+            image: 'img/livedrop/ld-item-7.png',
+            title: 'AK-47',
+            type: 'Jungle Tiger',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'light-blue',
+            image: 'img/livedrop/ld-item-8.png',
+            title: 'Talon Knife',
+            type: 'Hive',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'blue',
+            image: 'img/livedrop/ld-item-9.png',
+            title: 'Five-SeveN',
+            type: 'Vulcan	',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'blue',
+            image: 'img/livedrop/ld-item-10.png',
+            title: 'Galil AR',
+            type: 'Tornado',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'yellow',
+            image: 'img/livedrop/ld-item-11.png',
+            title: 'Ursus Knife',
+            type: 'Sand Mesh	',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'purple',
+            image: 'img/livedrop/ld-item-12.png',
+            title: 'Huntsman Knife',
+            type: 'Desert Warfare',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'red',
+            image: 'img/livedrop/ld-item-13.png',
+            title: 'XM1014',
+            type: 'Blind Spot',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }, {
+            color: 'yellow',
+            image: 'img/livedrop/ld-item-14.png',
+            title: 'MP5-SD',
+            type: 'Silver Quartz',
+            hoverImage: 'img/livedrop/ld-item-hover-1.png',
+            hoverTitle: 'Marshmello'
+        }
+    ]
+
+
+.livedrop-wrap
+    ul.livedrop 
+        each item in livedrop
+            - var colorClass = 'livedrop__link--' + item.color
+            li.livedrop__item 
+                a.livedrop__link(class=colorClass, href="#")
+                    img.livedrop__img(src=item.image)
+                    .livedrop__title 
+                        span 
+                            | !{item.title}
+                        span.type 
+                            | !{item.type}
+                    .livedrop__hover 
+                        .livedrop__hover-inner
+                            .livedrop__hover-img 
+                                img(src=item.hoverImage)
+                            span.livedrop__hover-title 
+                                | !{item.hoverTitle}

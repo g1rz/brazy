@@ -1,0 +1,50 @@
+header.header
+    .header__row
+        .header__side
+            a.logo(href="/")
+                img.logo__img(src="img/logo.svg")
+            a.bonus(href="#")
+                .bonus__inner 
+                    .bonus__icon 
+                        svg
+                            use(xlink:href="img/sprite.svg#gift")
+                        span.bonus__num 
+                            | 3
+                    span.bonus__title 
+                        | Bonuses
+        .header__main 
+            .header__top
+                .header__item
+                    a.logo-mobile(href="/")
+                        img.logo-mobile__img(src="img/logo.svg")
+                    include ./langs
+
+                    button.btn-icon
+                        svg.btn-icon__image 
+                            use(xlink:href="img/sprite.svg#sound")
+                        span.btn-icon__notice.btn-icon__notice--on
+                            | on
+                      
+                    include ./stat-list
+                
+                .header__item 
+                    include ./social
+
+                .header__item.header__item--mobile
+                    .mobile-menu 
+                        button.mobile-menu__btn(aria-label="menu")
+                            i.mobile-menu__btn-icon
+
+                    a.user-info-mobile(href="#")
+                        img(src="img/user-icon.png")
+
+            include ./livedrop
+
+            .header__bottom 
+                .header__item 
+                    
+                    include ./main-menu
+                .header__item
+                    include ./user-info
+
+

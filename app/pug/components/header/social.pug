@@ -1,0 +1,17 @@
+-
+    var social = [
+        'img/sprite.svg#telegram',
+        'img/sprite.svg#vk',
+        'img/sprite.svg#instagram',
+        'img/sprite.svg#youtube',
+        'img/sprite.svg#twitter',
+        'img/sprite.svg#facebook',
+        'img/sprite.svg#tiktok'
+    ]
+
+ul.social 
+    each item in social 
+        li.social__item 
+            a.social__link(href="#", target="_blank")
+                svg
+                    use(xlink:href=item)

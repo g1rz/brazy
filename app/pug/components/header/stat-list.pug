@@ -1,0 +1,45 @@
+-
+    var stats = [
+        {
+            icon: 'img/sprite.svg#icon-online',
+            num: '3 890',
+            title: 'Online',
+            shadow: true
+        }, {
+            icon: 'img/sprite.svg#icon-cases',
+            num: '506 860',
+            title: 'Cases open',
+            shadow: false
+        }, {
+            icon: 'img/sprite.svg#icon-contacts',
+            num: '46 809',
+            title: 'contracts',
+            shadow: false
+        }, {
+            icon: 'img/sprite.svg#icon-upgrades',
+            num: '109 088',
+            title: 'Upgrades',
+            shadow: false
+        }, {
+            icon: 'img/sprite.svg#icon-battles',
+            num: '30 899',
+            title: 'battles',
+            shadow: false
+        }, {
+            icon: 'img/sprite.svg#icon-user',
+            num: '1 068 448',
+            title: 'users',
+            shadow: false
+        }
+    ]
+
+ul.stat-list 
+    each item in stats
+        - var addClass = item.shadow ? 'stat-list__item-icon--online' : ''
+        li.stat-list__item 
+            svg.stat-list__item-icon(class=addClass)
+                use(xlink:href=item.icon)
+            span.stat-list__item-num 
+                | !{item.num}
+            span.stat-list__item-title 
+                | !{item.title}

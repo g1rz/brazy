@@ -1,0 +1,52 @@
+.stat-list 
+    display: flex 
+    flex-wrap: wrap
+    list-style: none
+    margin-left: 30px
+    &__item 
+        position: relative
+        padding-left: 30px
+        margin-right: 25px
+        &:last-child
+            margin-right: 0
+
+    &__item-icon
+        position: absolute
+        top: 0
+        left: 0
+        width: 22px
+        height: 22px
+        fill: #FFBD98
+
+        &--online 
+            filter: drop-shadow(0px -1px 27px rgba(121, 74, 251, 0.88))
+            fill: #A98AFF
+        
+    &__item-num 
+        display: block 
+        font-weight: 700
+        font-size: 15px
+        line-height: 18px
+        color: #CECFDE
+
+    &__item-title 
+        display: block
+        font-weight: 500
+        font-size: 10px
+        line-height: 12px
+        text-transform: uppercase
+        color: #60627A
+
+@media (max-width: 1400px)
+    .stat-list
+        &__item
+            margin-right: 15px
+            padding-left: 20px
+        
+        &__item-icon 
+            width: 15px
+            height: 15px
+
+@media (max-width: 1160px)
+    .stat-list
+        display: none

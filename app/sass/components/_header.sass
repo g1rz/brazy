@@ -1,0 +1,165 @@
+.header 
+    margin: 16px 30px 
+
+    &__row 
+        display: flex 
+        flex-wrap: wrap
+        height: 100%
+
+    &__side
+        width: 110px
+        height: 100%
+    
+    &__main 
+        width: calc(100% - 110px)
+        height: 100%
+
+    &__top 
+        display: flex 
+        flex-wrap: wrap 
+        justify-content: space-between
+        margin: 0 24px 15px 6px
+
+    &__bottom 
+        display: flex 
+        flex-wrap: wrap 
+        align-items: center
+        justify-content: space-between
+        height: 70px
+        background: #21232F
+        border-radius: 0px 0px 12px 0px
+
+    &__item 
+        display: flex 
+        flex-wrap: wrap
+        align-items: center
+
+        &--mobile
+            display: none
+
+.logo
+    +center
+    width: 110px
+    height: 121px
+    left: 30px
+    top: 16px
+    background: #191A24
+    border-radius: 12px 12px 0px 0px
+
+.logo-mobile 
+    display: none
+
+.bonus 
+    +center
+    width: 110px
+    height: 104px
+    background: #242633
+    border-radius: 0px 0px 0px 12px
+    text-decoration: none
+    &__icon 
+        position: relative
+        width: 36px
+        height: 36px
+        margin: 0 auto 9px
+        svg 
+            width: 100%
+            height: 100%
+        
+    &__num 
+        position: absolute
+        display: inline-block 
+        bottom: -3px
+        right: -3px
+        padding: 2px 5px
+        background: #EA639C
+        border-radius: 6px
+        font-weight: 800
+        font-size: 10px
+        line-height: 12px
+        color: #FFFFFF
+    
+    &__title 
+        font-weight: 800
+        font-size: 12px
+        line-height: 14px
+        text-transform: uppercase
+        text-align: center
+        color: #FFDEF8
+
+.mobile-menu 
+    display: none
+
+
+@media (max-width: 1400px)
+    .header
+        &__top 
+            margin: 0 0 15px
+        &__side 
+            width: 80px
+
+    .logo, .bonus 
+        width: 80px
+
+@media (max-width: 1160px)
+    .bonus 
+        display: none
+
+    .header
+        margin: 0
+        &__top 
+            padding: 10px 15px 
+            margin: 0
+            order: 2
+        &__side 
+            display: none
+        &__main 
+            display: flex 
+            flex-direction: column
+            width: 100%
+        &__bottom 
+            display: none
+        &__item--mobile 
+            display: flex
+
+    .logo-mobile 
+        display: flex 
+        width: 50px
+        height: 50px
+
+    .mobile-menu 
+        display: block
+
+        &__btn 
+            display: flex 
+            align-items: center
+            justify-content: center
+            width: 44px
+            height: 44px
+            background: #272A38
+            border-radius: 4px 
+            border: 1px solid #2A2B35
+
+        &__btn-icon 
+            position: relative
+            width: 30px
+            height: 3px
+            border-radius: 1px 
+            background: #fff
+            &::before, &::after 
+                content: ''
+                width: 30px
+                height: 3px
+                border-radius: 1px 
+                background: #fff
+                position: absolute
+                left: 0
+            &::before 
+                top: -10px
+            &::after 
+                bottom: -10px
+
+
+@media (max-width: 767px)
+    .header
+        .social 
+            display: none
